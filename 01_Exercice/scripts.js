@@ -1,4 +1,4 @@
-const generateButton = document.querySelector("#generate-button");
+const generateButton = document.querySelector('#generate-button');
 const colorsDiv = document.querySelector(".colors");
 
 function generateColors() {
@@ -11,16 +11,16 @@ function generateColors() {
     const colorName = document.createElement("p");
     colorName.textContent = color;
     colorName.style.color = color;
-    colorsDiv.appendChild(colorDiv);
     colorDiv.appendChild(colorName);
+    colorsDiv.appendChild(colorDiv);
   }
 }
 
 function generateRandomColor() {
-  const letters = "0123456789ABCDEF";
+  let letters = "0123456789ABCDEF";
   let color = "#";
 
-  for (let i = 0; i < 6; i++) {
+  for(let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
 
